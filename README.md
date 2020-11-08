@@ -1,4 +1,4 @@
-# OurBasis
+# OurBasis: resurrecting Basis watches
 See blog post and youtube video for more info.
 
 All the server files should be placed in your webserver and whatever server you use you’ll need to remap the original URLs requested from the basis app to these files. The URLs are listed in each file as comments and I’d advise also reviewing the source android APK’s for both the B1 & Peak in Jadx to get familiar with the requests and for any troubleshooting you might come across.
