@@ -3,6 +3,8 @@ See blog post and youtube video for more info:
 
 https://jabituyaben.wixsite.com/majorinput/post/resurrecting-basis-watches
 
+WARNING: The Basis Peak is a dangerous device with a known issue that causes overheating, do your research on these watches and why they were recalled beforehand.
+
 All the server files should be placed in your webserver and whatever server you use you’ll need to remap the original URLs requested from the basis app to these files. The URLs are listed in each file as comments and I’d advise also reviewing the source android APK’s for both the B1 & Peak in Jadx to get familiar with the requests and for any troubleshooting you might come across.
 
 Aside from debugging using server logs or a packet sniffer, you can also review the android app logs, both the Peak and B1 have verbose logging:
