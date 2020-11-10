@@ -7,6 +7,7 @@ Aside from debugging using server logs or a packet sniffer, you can also review 
 
 B1 log location:
 /storage/emulated/0/Android/data/com.mybasis.android.basis/files/logs
+
 Peak log location:
 /data/data/com.mybasis.android.basis.peak/files/log
 
@@ -20,7 +21,7 @@ The Basis B1 had a Developer Options menu in the production app where you can ch
 
 It’s a straightfoward process and once you make any updates to shared_prefs, you should close and restart the app for changes to get picked up.
 
-If you’d like to have the app resolve to an IP address in the above rather than to a hostname, you will have to ammend the android APK’s. This can be done by decompiling the apps in apktool and ammending the smali files where relevant. I cross referenced against Jadx to find references to “https://api-“ and replaced that string with just “http://” I think for the B1 there might also be a couple of additional files where you have to replace “https://”  with “http://” if you go this route. You’ll see from the Basis app log files where you’ll need to do this because it will log the error appropriately. The other option to modifying the app is to setup a local DNS and route requests that way (untested). Be very sure about the changes you’re making to smali files – you can easily break the app or whatever specific thing you’re trying to do if you make mistakes.
+If you’d like to have the app resolve to an IP address in the above rather than to a hostname, you will have to ammend the android APK’s. This can be done by decompiling the apps in apktool and ammending the smali files where relevant. I cross referenced against Jadx to find references to “https://api-“ and replaced that string with just “http://” I think for the B1 there might also be a couple of additional files where you have to replace “https://”  with “http://” if you go this route. You’ll see from the Basis app log files where you’ll need to do this because it will log the error appropriately. The other option aside from modifying the app is to setup a local DNS and route requests for mybasis to your server that way (untested). Be very sure about the changes you’re making to smali files – you can easily break the app or whatever specific thing you’re trying to do.
 The Python parser scripts are fairly short and self-explanatory but if you’re not familiar working with binary files, just do some searches on the segments of code you don’t understand. It’s worth looking into how data is stored in memory and representation of binary (just numbers in this case) in hexidecimal. The Peak parser is more work in progress – still figuring out where GSR data is and some of the temperature parsing might be wrong at the moment.
 
 Other things you'll need:
