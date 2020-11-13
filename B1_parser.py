@@ -85,8 +85,8 @@ while i < len(valid_samples):
     
     z=0
     while z < 30:
-        skin = x.read('uintle:24') #very small number stored as a large 24bit int by inverting
-        galvanic_array.append(1/skin)
+        skin = x.read('uintle:24')
+        galvanic_array.append(1/skin) #seems to work for charting but probably doesn't convert to siemens/cm so will need to review
         z+=1
     #print(galvanic_array[z-1])
     if len(galvanic_array) > 0:
