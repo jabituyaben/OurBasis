@@ -1,5 +1,6 @@
 '''
-this is work in progress script - still trying to work out some of the metrics
+this is a work in progress script - still trying to work out some of the metrics and a few of them parsed here would need further calculation steps once in CSV
+will update when I get a change
 '''
 
 import binascii
